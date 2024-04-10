@@ -1,6 +1,18 @@
-# Portfolio Blog Starter
+# lux.dev Blog
 
-This is a porfolio site template complete with a blog. Includes:
+<p align="center">
+  <a href="https://lux.dev/">
+    <img src="https://parsertime.app/icon.png" height="96">
+    <h3 align="center">lux.dev Blog</h3>
+  </a>
+</p>
+
+[![Website](https://img.shields.io/website?style=for-the-badge&labelColor=000&up_message=Operational&url=https%3A%2F%2Fdocs.parsertime.app)](https://parsertime.app)
+![GitHub Repo stars](https://img.shields.io/github/stars/luxdotdev/parsertime-docs?style=for-the-badge&labelColor=000)
+
+This is the repository for the lux.dev blog. It is built using [Next.js](https://nextjs.org) and hosted on [Vercel](https://vercel.com).
+
+## Tech Stack
 
 - MDX and Markdown support
 - Optimized for SEO (sitemap, robots, JSON-LD schema)
@@ -11,32 +23,12 @@ This is a porfolio site template complete with a blog. Includes:
 - Vercel Speed Insights / Web Analytics
 - Geist font
 
-## Demo
+## Local Development
 
-https://portfolio-blog-starter.vercel.app
+First, run `pnpm i` to install the dependencies.
 
-## How to Use
+Then, run `pnpm dev` to start the development server and visit [localhost:4321](http://localhost:4321).
 
-You can choose from one of the following two methods to use this repository:
+## License
 
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
-```
-
-Then, run Next.js in development mode:
-
-```bash
-pnpm dev
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+This project is licensed under the MIT License.
