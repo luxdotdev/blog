@@ -3,6 +3,7 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 import React from "react";
+import { Tweet as ReactTweet } from "react-tweet";
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -77,13 +78,17 @@ function createHeading(level) {
           className: "anchor",
         }),
       ],
-      children,
+      children
     );
   };
 
   Heading.displayName = `Heading${level}`;
 
   return Heading;
+}
+
+function Tweet({ id }) {
+  return <ReactTweet id={id} />;
 }
 
 let components = {
@@ -97,6 +102,7 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+  Tweet,
 };
 
 export function CustomMDX(props) {
