@@ -1,0 +1,100 @@
+---
+title: "Reflections from Parsertime's Launch Week"
+publishedAt: "2024-04-21"
+summary: "A week after launching Parsertime, we reflect on the experience and share our thoughts so far."
+---
+
+It's been a week since we launched Parsertime, and we wanted to take a moment to reflect on the journey so far. 
+The response from the community has been amazing, and we're grateful for all the feedback and support we've received. 
+Here are some of our reflections from the launch week:
+
+## The community's response has been overwhelmingly positive
+
+The response from the community has been overwhelmingly positive. We've received a lot of feedback,
+feature requests, and suggestions for improvement. We're grateful for all the support and encouragement
+we've received, and we're excited to continue building and improving Parsertime based on the feedback we've received.
+We wanted to talk about some of the analytics we've seen so far.
+
+![Launch analytics](/launch-analytics.png)
+
+We received about 160 unique visitors on launch day, and interest the next day was still high with 144 unique visitors.
+While we've seen a slight decrease in traffic since then, we're still seeing a steady stream of visitors to the site.
+
+![Launch analytics 2](/launch-analytics-2.png)
+
+Most of our traffic has come from Twitter, with 187 visitors coming from the platform. We've also seen a good amount of 
+traffic from Discord, with 66 visitors. The most popular country for visitors has overwhelmingly been the United States, 
+with 116 visitors, followed by Canada. We've also seen visitors from countries like the United Kingdom, Germany, and Australia.
+We're excited to see the interest in Parsertime from around the world and look forward to continuing to grow our community.
+In the future, we want to expand our reach and make Parsertime accessible to users from all over the world by providing
+translations and support for different languages.
+
+## We weren't fully prepared for the amount of traffic
+
+One of the biggest surprises for us was just how much attention Parsertime received on launch day.
+We are, of course, grateful and excited about the interest in Parsertime, but we were not prepared 
+for how the traffic would affect our services. The Tweet below from our announcement shows the
+community's excitement, but it also shows the amount of attention we received.
+
+<Tweet id="1779630780454404367" />
+
+At the time of writing, this Tweet received about 14k views and 200 likes. This might not seem like a lot,
+but for a mostly one person project, this amount of traffic can be overwhelming. The biggest issue was
+our email infrastructure. We use Twilio Sendgrid to send emails, and we quickly hit our free tier limit.
+
+![Twilio Usage Warning](/twilio-usage.png)
+*A warning from Twilio about reaching our email quota for the month.*
+
+To keep platform costs low, we had to quickly pivot to a new provider while avoiding downtime for our users.
+Our solution was to use Amazon's Simple Email Service, which was a bit more complicated to set up but 
+allowed us to send emails without incurring additional costs. 
+
+![Amazon SES Metrics](/ses-email-metrics.png)
+*AWS SES showing our new email quota and usage. We expect this to suit our needs for a long time.*
+
+There's a lot of moving parts and dependencies 
+in our project, and the email quota went unnoticed throughout much of the development process due to not 
+being a priority. This experience taught us the importance of tracking quotas and making sure our service can
+scale to meet demand. Luckily for us, due to being hosted on Vercel, our website was able to handle the traffic
+without any issues and we remained at 100% uptime.
+
+## We need to improve our onboarding process
+
+Another area we identified for improvement was our onboarding process. We saw from the initial uploaded
+data that many users were confused about how to use Parsertime. We had a few users who uploaded incorrect
+data or didn't understand the value that Parsertime provides. To address this, we've put work in place
+to improve our onboarding process, scale up documentation, and provide more resources to help users get started.
+We made a [previous blog post](/blog/example-scrim) that shows how to use Parsertime with a real-world example.
+Additionally, we provide support via the [Community Discord](https://parserti.me/discord) and help users figure
+out how to use Parsertime for their needs.
+
+## Our documentation needs improvement
+
+We also identified that [our documentation](https://docs.parsertime.app) needs improvement. We've received 
+feedback from users that our documentation is lacking in some areas and could be more comprehensive. 
+To address this, we've started working on making improvements and clarifying unexpected behavior. As we add 
+new features and functionality to Parsertime, we'll continue to update our documentation to ensure that users 
+have the information they need to get the most out of the platform.
+
+One such area that we've improved since launch is the log collection process. We've added more detailed
+instructions on how to collect logs from Overwatch and upload them to Parsertime. We've also added
+new features for scrim management and reflected that in our documentation. We're committed to providing
+comprehensive and up-to-date documentation to help users get the most out of Parsertime.
+
+Please do remember that we're a small team and we're working hard to improve Parsertime based on the feedback
+we've received. We appreciate your patience and understanding as we work to make Parsertime the best it can be.
+Additionally, while the platform is still in beta, our documentation may not be as comprehensive as we'd like.
+We're working hard to improve this and appreciate your feedback and suggestions for how we can make Parsertime
+better for you. If you have any feedback or suggestions, please don't hesitate to reach out to us via the 
+[Community Discord](https://parserti.me/discord).
+
+## Conclusion
+
+Overall, the launch week has been an exciting and rewarding experience for us. It's been a long five months
+of development, and we're thrilled to see Parsertime out in the world and being used by the community. We're
+grateful for all the feedback and support we've received and are excited to continue building and improving
+Parsertime based on the feedback we've received. We're committed to making Parsertime the best it can be and
+look forward to continuing to grow our community and provide a valuable service to users around the world.
+Happy scrimming, and thank you for your support! 🥳
+
+<Tweet id="1780039995517968555" />
