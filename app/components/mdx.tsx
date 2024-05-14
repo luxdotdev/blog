@@ -4,6 +4,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 import React from "react";
 import { Tweet as ReactTweet } from "react-tweet";
+import {
+  Callout as ImportedCallout,
+  CalloutProps,
+  TypeToEmoji,
+} from "app/components/callout";
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -91,6 +96,18 @@ function Tweet({ id }) {
   return <ReactTweet id={id} />;
 }
 
+function Callout({
+  children,
+  type = "default",
+  emoji = TypeToEmoji[type],
+}: CalloutProps) {
+  return (
+    <ImportedCallout type={type} emoji={emoji}>
+      {children}
+    </ImportedCallout>
+  );
+}
+
 let components = {
   h1: createHeading(1),
   h2: createHeading(2),
@@ -103,6 +120,7 @@ let components = {
   code: Code,
   Table,
   Tweet,
+  Callout,
 };
 
 export function CustomMDX(props) {
